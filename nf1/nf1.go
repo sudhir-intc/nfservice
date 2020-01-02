@@ -137,7 +137,7 @@ func RunServer(ctx context.Context, cfg *Config) error {
 		WriteTimeout:   10 * time.Second,
 		MaxHeaderBytes: 1 << 20,
 	}
-	http.HandleFunc("/api", apiHandler)
+	http.HandleFunc("/nf2loc", apiHandler)
 	http.HandleFunc("/nf1", nf1Handler)
 
 	stopServerCh := make(chan bool, 2)
