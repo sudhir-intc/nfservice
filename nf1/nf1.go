@@ -206,7 +206,7 @@ func apiHandler(w http.ResponseWriter, r *http.Request) {
 		bytes.NewBuffer(requestBody))
 
 	// Add user-agent header and content-type header
-	req.Header.Set("User-Agent", "NEF-OPENNESS-1912")
+	req.Header.Set("User-Agent", "NF1")
 	req.Header.Set("Content-Type", "application/json")
 	req = req.WithContext(ctx)
 	log.Print("Sending a request to the server")
