@@ -45,3 +45,7 @@ default:http://localhost
 
 nfendpoint : The end point of the NF2 server for requests from NF1.
 default: :8090
+
+## Screenshot of a successful execution
+
+![NF_Screeshot](nf_screenshot.JPG)
