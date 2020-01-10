@@ -5,17 +5,17 @@ interfaces. NF1 exposes an API to get the url of NF2 api.
 
 Both NF1 and NF2 have an inbuilt http server and http client.
 NF1 exposes an a REST API  /nf2loc to get the location of the NF2.
-- On query(GET request) from the client to NF1
+- On query(GET request) from the client to NF1  [client -> GET (http://localhost:8060/nf2loc) -> NF1]
 - NF1 sends a POST request to NF2 with the api location of NF1 in the body and 
-  the time when the request has been sent
+  the time when the request has been sent  [ NF1 -> POST (http://localhost:8090/) -> NF2 ]
 - NF2 on receiving the POST request from NF1, NF2 checks the content of the 
-  request, if proper responses with a 200 OK.
+  request, if proper responds with a 200 OK. [ NF2 -> 200 OK(POST) -> NF1 ]
 - NF2 sends a POST request to NF1 with the api location of NF2 in the body and
-  the time when the request has been sent
+  the time when the request has been sent [ NF2 -> POST (http://localhost:8070) -> NF1]
 - NF1 on receiving the POST request from NF2, NF1 checks the content of the 
-  request, if proper responses with a 200 OK.
+  request, if proper responds with a 200 OK. [NF1 -> 200 OK(POST) -> NF2 ]
 - NF1 responds to the GET request from the client with the location of NF2 and 
-  the time when the NF2 had generated the request.
+  the time when the NF2 had generated the request.[NF1 -> 200 OK(GET) -> client]
 
 ## NF1
 Configurations of NF1 are as below which is provided in JSON format
