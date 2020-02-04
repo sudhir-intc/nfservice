@@ -1,0 +1,24 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2019 Intel Corporation
+
+version: '3'
+services:
+  nf1:
+    build:
+      context: .
+      dockerfile: "Dockerfile_nf1"
+    image: "nf1:1.0"
+    privileged: true
+    ports:
+     - "8060:8060"
+     - "8070:8070"
+    network_mode: bridge
+  nf2:
+    build:
+      context: .
+      dockerfile: "Dockerfile_nf2"
+    image: "nf2:1.0"
+    privileged: true
+    ports:
+     - "8090:8090"
+    network_mode: bridge
