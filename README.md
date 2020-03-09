@@ -28,7 +28,7 @@ localapirootprefix : API root prefix of the NF1. The NF1 uses the API root prefi
 to sends its api location towards NF2. 
 default:http://localhost
 
-HTTPConfig
+HTTP Config
 
 apiendpoint : The end point of the NF1 for the API from the client.
 default::8060
